@@ -19,5 +19,7 @@ public interface MyList<T> {
     void removeAt(int index);
 
     // TODO: вставить элемент со сдвигом вправо
-    void insert(int element);
+    void insert(int index, int element);
+
+    void reverse();
 }

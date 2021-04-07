@@ -54,4 +54,19 @@ public class MyArrayList<T> implements MyList<T> {
     public void clear() {
         this.count = 0;
     }
+
+    @Override
+    public void removeAt(int index) {
+
+    }
+
+    @Override
+    public void insert(int index, int element) {
+
+    }
+
+    @Override
+    public void reverse() {
+
+    }
 }
