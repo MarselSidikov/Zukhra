@@ -1,4 +1,6 @@
-package ru.zukhra;
+package ru.zukhra.examples;
+
+import ru.zukhra.processors.RandomValueProcessor;
 
 public class Main {
 
@@ -7,7 +9,7 @@ public class Main {
 	    AnotherClass object2 = new AnotherClass();
 	    SimpleClass object3 = new SimpleClass();
 
-	    RandomNumberGenerator generator = new RandomNumberGenerator();
+	    RandomValueProcessor generator = new RandomValueProcessor();
 	    generator.process(object1);
         generator.process(object2);
 	    generator.process(object3);

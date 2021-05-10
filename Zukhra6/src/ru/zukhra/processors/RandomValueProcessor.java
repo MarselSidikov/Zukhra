@@ -1,4 +1,4 @@
-package ru.zukhra;
+package ru.zukhra.processors;
 
 import ru.zukhra.annotations.RandomValue;
 
@@ -13,7 +13,7 @@ import java.util.Random;
  * @author Sidikov Marsel (First Software Engineering Platform)
  * @version v1.0
  */
-public class RandomNumberGenerator {
+public class RandomValueProcessor implements AnnotationsProcessor {
     public void process(Object object) {
         Random random = new Random();
         // получили класс входного объекта

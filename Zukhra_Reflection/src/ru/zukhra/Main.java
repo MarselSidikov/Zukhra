@@ -25,6 +25,5 @@ public class Main {
 
         Human zukhra = humanConstructor.newInstance("Зухра", 18);
         method.invoke(zukhra);
-
     }
 }

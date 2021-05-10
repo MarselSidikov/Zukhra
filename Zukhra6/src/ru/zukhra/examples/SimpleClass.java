@@ -1,5 +1,6 @@
-package ru.zukhra;
+package ru.zukhra.examples;
 
+import javafx.fxml.FXML;
 import ru.zukhra.annotations.RandomValue;
 
 import java.util.StringJoiner;
@@ -11,22 +12,20 @@ import java.util.StringJoiner;
  * @author Sidikov Marsel (First Software Engineering Platform)
  * @version v1.0
  */
-public class AnotherClass {
-    @RandomValue(from = 99, to = 150)
+public class SimpleClass {
+
+    @FXML
+    @RandomValue(from = 5, to = 10)
     private int field1;
 
     @RandomValue
     private int field2;
 
-    @RandomValue(from = -100, to = 500)
-    private int field3;
-
     @Override
     public String toString() {
-        return new StringJoiner(", ", AnotherClass.class.getSimpleName() + "[", "]")
+        return new StringJoiner(", ", SimpleClass.class.getSimpleName() + "[", "]")
                 .add("field1=" + field1)
                 .add("field2=" + field2)
-                .add("field3=" + field3)
                 .toString();
     }
 }
