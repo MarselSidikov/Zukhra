@@ -5,7 +5,7 @@ import java.util.Random;
 public class Main {
 
     public static void main(String[] args) {
-        OperationService service = new OperationService();
+        OperationService service = new OperationService(5);
 
         for (int i = 0; i < 50; i++) {
             new Thread(() -> {
@@ -13,7 +13,11 @@ public class Main {
                 int value = random.nextInt(10);
                 System.out.println(Thread.currentThread().getName() + " запрашивает число " + value);
                 int result = service.performAndExpensiveOperation(value);
-                System.out.println(Thread.currentThread().getName() + " число получено - " + result);
+                if (result != -1) {
+                    System.out.println(Thread.currentThread().getName() + " число получено - " + result);
+                } else {
+                    System.out.println(Thread.currentThread().getName() + " Результат не получен");
+                }
             }, "Thread-" + i).start();
         }
 
